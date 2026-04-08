@@ -133,5 +133,9 @@ def categories():
     
 #start the server
 if __name__ == "__main__":
-   mcp.run(transport="streamable-http")
-    # mcp.run()
+    if os.getenv("ENV") == "local":
+        # ✅ For local inspector
+        mcp.run(transport="streamable-http")
+    else:
+        # ✅ For MCP deployment
+        mcp.run()

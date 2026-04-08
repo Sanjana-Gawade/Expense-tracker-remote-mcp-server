@@ -19,12 +19,12 @@ powershelluv sync
 
 Running the Server
 Terminal 1 — Start the MCP server:
-powershelluv run python main.py
+uv run python main.py
 Server will start at http://localhost:8000
 
 Testing with MCP Inspector
 Terminal 2 — Open MCP Inspector:
-powershellnpx @modelcontextprotocol/inspector http://localhost:8000/mcp
+npx @modelcontextprotocol/inspector http://localhost:8000/mcp
 Then open the URL shown in the terminal in your browser.
 
 Project Structure
