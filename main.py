@@ -138,19 +138,3 @@ def categories():
     except Exception as e:
         return f'{{"error": "{str(e)}"}}'
 
-
-# ---------- START SERVER ----------
-if __name__ == "__main__":
-    try:
-        transport = os.getenv("FASTMCP_TRANSPORT", "http")
-        print(f"[STARTUP] Starting MCP server on {HOST}:{PORT} with transport={transport}")
-
-        mcp.run(
-            transport=transport,
-            host=HOST,
-            port=PORT
-        )
-
-    except Exception as e:
-        print(f"[FATAL] Server failed to start: {e}")
-        raise
